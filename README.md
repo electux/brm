@@ -39,7 +39,7 @@ cd brm-x.y
 cp -R *.sh   /data/dev/build_root/
 ```
 
-![alt tag](https://raw.githubusercontent.com/electux/brm/dev/docs/setup_tree.png)
+![env](https://raw.githubusercontent.com/electux/brm/dev/docs/debtux.png)
 
 Or You can use docker to create image/container.
 
