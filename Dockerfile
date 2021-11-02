@@ -39,12 +39,12 @@ RUN DEBIAN_FRONTEND=noninteractive \
     autotools-dev
 
 RUN mkdir -p /data/dev/build_root/
-RUN cp brm.sh /data/dev/build_root/
-RUN cp brm_list_projects.sh /data/dev/build_root/
-RUN cp brm_setup_project.sh /data/dev/build_root/
-RUN cp brm_clone_project.sh /data/dev/build_root/
-RUN cp brm_list_configurations.sh /data/dev/build_root/
-RUN cp brm_menu_configuration.sh /data/dev/build_root/
-RUN cp brm_build_project.sh /data/dev/build_root/
-RUN cp brm_list_images.sh /data/dev/build_root/
-RUN cp brm_clean_project.sh /data/dev/build_root/
+COPY brm.sh /data/dev/build_root/
+COPY brm_list_projects.sh /data/dev/build_root/
+COPY brm_setup_project.sh /data/dev/build_root/
+COPY brm_clone_project.sh /data/dev/build_root/
+COPY brm_list_configurations.sh /data/dev/build_root/
+COPY brm_menu_configuration.sh /data/dev/build_root/
+COPY brm_build_project.sh /data/dev/build_root/
+COPY brm_list_images.sh /data/dev/build_root/
+COPY brm_clean_project.sh /data/dev/build_root/
