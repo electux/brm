@@ -15,7 +15,7 @@
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 #
 # local STATUS
-# __list_projects
+# __brm_list_projects
 # STATUS=$?
 #
 # if [ $STATUS -eq 0 ]; then
@@ -28,7 +28,7 @@
 #    # return 127 | 128
 # fi
 #
-function __list_projects {
+function __brm_list_projects {
     if [[ ! -d "${BUILD_ROOT_DIR}/" ]]; then
         printf "%s\n" "[brm] expected directory: ${BUILD_ROOT_DIR}/"
         return 127
