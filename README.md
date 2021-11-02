@@ -376,12 +376,12 @@ brm_clean_project.sh
 
 ### Docs
 
-[![Documentation Status](https://readthedocs.org/projects/brm/badge/?version=latest)](https://brm.readthedocs.io/projects/brm/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/buildrootmanager/badge/?version=latest)](https://buildrootmanager.readthedocs.io/projects/buildrootmanager/en/latest/?badge=latest)
 
 More documentation and info at:
-* [https://brm.readthedocs.io/en/latest/](https://brm.readthedocs.io/en/latest/)
-* [https://www.gnu.org/software/bash/manual/](https://www.gnu.org/software/bash/manual/)
-* [https://buildroot.org/](https://buildroot.org/)
+* [https://buildrootmanager.readthedocs.io](https://buildrootmanager.readthedocs.io/en/latest/)
+* [https://www.gnu.org](https://www.gnu.org/software/bash/manual/)
+* [https://buildroot.org](https://buildroot.org/)
 
 ### Copyright and licence
 
