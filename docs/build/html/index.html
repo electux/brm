@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>brm &mdash; brm https://github.com/electux/brm/releases documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> brm
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">brm</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">brm</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>brm</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="brm">
+<h1>brm<a class="headerlink" href="#brm" title="Permalink to this headline">¶</a></h1>
+<p><strong>brm</strong> is shell tool for generating <a class="reference external" href="https://en.wikipedia.org/wiki/Buildroot">Buildroot</a>.</p>
+<p>Developed in <a class="reference external" href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">bash</a> code: <strong>100%</strong>.</p>
+<p><a class="reference external" href="https://github.com/electux/brm/actions?query=workflow%3A%22brm+shell+checker%22"><img alt="GitHub shell checker" src="https://github.com/electux/brm/workflows/brm%20shell%20checker/badge.svg" /></a></p>
+<p>The README is used to introduce the tool and provide instructions on
+how to install the tool, any machine dependencies it may have and any
+other information that should be provided before the tool is installed.</p>
+<p><a class="reference external" href="https://github.com/electux/brm/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/electux/brm.svg" /></a> <a class="reference external" href="https://brm.readthedocs.io/projects/brm/en/latest/?badge=latest"><img alt="Documentation Status" src="https://readthedocs.org/projects/brm/badge/?version=latest" /></a> <a class="reference external" href="https://github.com/electux/brm/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/electux/brm.svg" /></a></p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Navigate to release <a class="reference external" href="https://github.com/electux/brm/releases">page</a> download and extract release archive.</p>
+<p>To install <strong>brm</strong> type the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar xvzf brm-x.y.tar.gz
+<span class="nb">cd</span> brm-x.y
+cp -R *.sh   /data/dev/build_root/
+</pre></div>
+</div>
+<p>Or You can use Docker to create image/container.</p>
+<p><a class="reference external" href="https://github.com/electux/brm/actions?query=workflow%3A%22brm+docker+checker%22"><img alt="GitHub docker checker" src="https://github.com/electux/brm/workflows/brm%20docker%20checker/badge.svg" /></a></p>
+</div>
+<div class="section" id="dependencies">
+<h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h1>
+<p><strong>brm</strong> requires next modules and libraries:</p>
+<ul class="simple">
+<li>sh_util <a class="reference external" href="https://github.com/electux/sh_util">https://github.com/electux/sh_util</a></li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create project setup</span>
+$./brm.sh init
+<span class="o">[</span>brm<span class="o">]</span> provide project name: microhil
+<span class="o">[</span>brm<span class="o">]</span> creating dir: /data/dev/build_root/microhil
+<span class="o">[</span>brm<span class="o">]</span> change dir: /data/dev/build_root/microhil
+Cloning into <span class="s1">&#39;buildroot&#39;</span>...
+remote: Enumerating objects: <span class="m">438618</span>, <span class="k">done</span>.
+remote: Total <span class="m">438618</span> <span class="o">(</span>delta <span class="m">0</span><span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta <span class="m">0</span><span class="o">)</span>, pack-reused <span class="m">438618</span>
+Receiving objects: <span class="m">100</span>% <span class="o">(</span><span class="m">438618</span>/438618<span class="o">)</span>, <span class="m">134</span>.63 MiB <span class="p">|</span> <span class="m">3</span>.46 MiB/s, <span class="k">done</span>.
+Resolving deltas: <span class="m">100</span>% <span class="o">(</span><span class="m">292220</span>/292220<span class="o">)</span>, <span class="k">done</span>.
+
+<span class="c1"># jump to project directory and source</span>
+<span class="nv">$cd</span> microhil/
+<span class="nv">$source</span> microhil.brm
+
+<span class="c1"># list projects</span>
+$./brm.sh list
+
+<span class="o">[</span>brm<span class="o">]</span> Setup workspace <span class="k">for</span> project <span class="c1">#microhil, run:</span>
+<span class="nb">source</span> /data/dev/build_root/microhil/microhil.brm
+
+<span class="c1"># list configuraitons</span>
+$./brm.sh conf
+Built-in configs:
+  aarch64_efi_defconfig                          - Build <span class="k">for</span> aarch64_efi
+  acmesystems_acqua_a5_256mb_defconfig           - Build <span class="k">for</span> acmesystems_acqua_a5_256mb
+  acmesystems_acqua_a5_512mb_defconfig           - Build <span class="k">for</span> acmesystems_acqua_a5_512mb
+  acmesystems_aria_g25_128mb_defconfig           - Build <span class="k">for</span> acmesystems_aria_g25_128mb
+  acmesystems_aria_g25_256mb_defconfig           - Build <span class="k">for</span> acmesystems_aria_g25_256mb
+  acmesystems_arietta_g25_128mb_defconfig        - Build <span class="k">for</span> acmesystems_arietta_g25_128mb
+  acmesystems_arietta_g25_256mb_defconfig        - Build <span class="k">for</span> acmesystems_arietta_g25_256mb
+  amarula_a64_relic_defconfig                    - Build <span class="k">for</span> amarula_a64_relic
+  amarula_vyasa_rk3288_defconfig                 - Build <span class="k">for</span> amarula_vyasa_rk3288
+  andes_ae3xx_defconfig                          - Build <span class="k">for</span> andes_ae3xx
+  arcturus_ucls1012a_defconfig                   - Build <span class="k">for</span> arcturus_ucls1012a
+  arcturus_ucp1020_defconfig                     - Build <span class="k">for</span> arcturus_ucp1020
+  armadeus_apf27_defconfig                       - Build <span class="k">for</span> armadeus_apf27
+  armadeus_apf28_defconfig                       - Build <span class="k">for</span> armadeus_apf28
+  armadeus_apf51_defconfig                       - Build <span class="k">for</span> armadeus_apf51
+  arm_foundationv8_defconfig                     - Build <span class="k">for</span> arm_foundationv8
+  arm_juno_defconfig                             - Build <span class="k">for</span> arm_juno
+  asus_tinker_rk3288_defconfig                   - Build <span class="k">for</span> asus_tinker_rk3288
+  at91sam9260eknf_defconfig                      - Build <span class="k">for</span> at91sam9260eknf
+  at91sam9g20dfc_defconfig                       - Build <span class="k">for</span> at91sam9g20dfc
+  at91sam9g45m10ek_defconfig                     - Build <span class="k">for</span> at91sam9g45m10ek
+  at91sam9rlek_defconfig                         - Build <span class="k">for</span> at91sam9rlek
+  at91sam9x5ek_defconfig                         - Build <span class="k">for</span> at91sam9x5ek
+  at91sam9x5ek_dev_defconfig                     - Build <span class="k">for</span> at91sam9x5ek_dev
+  at91sam9x5ek_mmc_defconfig                     - Build <span class="k">for</span> at91sam9x5ek_mmc
+  at91sam9x5ek_mmc_dev_defconfig                 - Build <span class="k">for</span> at91sam9x5ek_mmc_dev
+  atmel_sama5d27_som1_ek_mmc_dev_defconfig       - Build <span class="k">for</span> atmel_sama5d27_som1_ek_mmc_dev
+  atmel_sama5d2_xplained_mmc_defconfig           - Build <span class="k">for</span> atmel_sama5d2_xplained_mmc
+  atmel_sama5d2_xplained_mmc_dev_defconfig       - Build <span class="k">for</span> atmel_sama5d2_xplained_mmc_dev
+  atmel_sama5d3xek_defconfig                     - Build <span class="k">for</span> atmel_sama5d3xek
+  atmel_sama5d3_xplained_defconfig               - Build <span class="k">for</span> atmel_sama5d3_xplained
+  atmel_sama5d3_xplained_dev_defconfig           - Build <span class="k">for</span> atmel_sama5d3_xplained_dev
+  atmel_sama5d3_xplained_mmc_defconfig           - Build <span class="k">for</span> atmel_sama5d3_xplained_mmc
+  atmel_sama5d3_xplained_mmc_dev_defconfig       - Build <span class="k">for</span> atmel_sama5d3_xplained_mmc_dev
+  atmel_sama5d4_xplained_defconfig               - Build <span class="k">for</span> atmel_sama5d4_xplained
+  atmel_sama5d4_xplained_dev_defconfig           - Build <span class="k">for</span> atmel_sama5d4_xplained_dev
+  atmel_sama5d4_xplained_mmc_defconfig           - Build <span class="k">for</span> atmel_sama5d4_xplained_mmc
+  atmel_sama5d4_xplained_mmc_dev_defconfig       - Build <span class="k">for</span> atmel_sama5d4_xplained_mmc_dev
+  avenger96_defconfig                            - Build <span class="k">for</span> avenger96
+  bananapi_m1_defconfig                          - Build <span class="k">for</span> bananapi_m1
+  bananapi_m1_plus_defconfig                     - Build <span class="k">for</span> bananapi_m1_plus
+  bananapi_m2_plus_defconfig                     - Build <span class="k">for</span> bananapi_m2_plus
+  bananapi_m2_ultra_defconfig                    - Build <span class="k">for</span> bananapi_m2_ultra
+  bananapi_m2_zero_defconfig                     - Build <span class="k">for</span> bananapi_m2_zero
+  bananapi_m64_defconfig                         - Build <span class="k">for</span> bananapi_m64
+  bananapro_defconfig                            - Build <span class="k">for</span> bananapro
+  beagleboardx15_defconfig                       - Build <span class="k">for</span> beagleboardx15
+  beagleboneai_defconfig                         - Build <span class="k">for</span> beagleboneai
+  beaglebone_defconfig                           - Build <span class="k">for</span> beaglebone
+  beaglebone_qt5_defconfig                       - Build <span class="k">for</span> beaglebone_qt5
+  beaglev_defconfig                              - Build <span class="k">for</span> beaglev
+  beelink_gs1_defconfig                          - Build <span class="k">for</span> beelink_gs1
+  chromebook_elm_defconfig                       - Build <span class="k">for</span> chromebook_elm
+  chromebook_snow_defconfig                      - Build <span class="k">for</span> chromebook_snow
+  ci20_defconfig                                 - Build <span class="k">for</span> ci20
+  csky_gx6605s_defconfig                         - Build <span class="k">for</span> csky_gx6605s
+  cubieboard2_defconfig                          - Build <span class="k">for</span> cubieboard2
+  engicam_imx6qdl_icore_defconfig                - Build <span class="k">for</span> engicam_imx6qdl_icore
+  engicam_imx6qdl_icore_qt5_defconfig            - Build <span class="k">for</span> engicam_imx6qdl_icore_qt5
+  engicam_imx6qdl_icore_rqs_defconfig            - Build <span class="k">for</span> engicam_imx6qdl_icore_rqs
+  engicam_imx6ul_geam_defconfig                  - Build <span class="k">for</span> engicam_imx6ul_geam
+  engicam_imx6ul_isiot_defconfig                 - Build <span class="k">for</span> engicam_imx6ul_isiot
+  freescale_imx28evk_defconfig                   - Build <span class="k">for</span> freescale_imx28evk
+  freescale_imx6dlsabreauto_defconfig            - Build <span class="k">for</span> freescale_imx6dlsabreauto
+  freescale_imx6dlsabresd_defconfig              - Build <span class="k">for</span> freescale_imx6dlsabresd
+  freescale_imx6qsabreauto_defconfig             - Build <span class="k">for</span> freescale_imx6qsabreauto
+  freescale_imx6qsabresd_defconfig               - Build <span class="k">for</span> freescale_imx6qsabresd
+  freescale_imx6sxsabresd_defconfig              - Build <span class="k">for</span> freescale_imx6sxsabresd
+  freescale_imx6ullevk_defconfig                 - Build <span class="k">for</span> freescale_imx6ullevk
+  freescale_imx7dsabresd_defconfig               - Build <span class="k">for</span> freescale_imx7dsabresd
+  freescale_imx8mmevk_defconfig                  - Build <span class="k">for</span> freescale_imx8mmevk
+  freescale_imx8mnevk_defconfig                  - Build <span class="k">for</span> freescale_imx8mnevk
+  freescale_imx8mpevk_defconfig                  - Build <span class="k">for</span> freescale_imx8mpevk
+  freescale_imx8mqevk_defconfig                  - Build <span class="k">for</span> freescale_imx8mqevk
+  freescale_imx8qmmek_defconfig                  - Build <span class="k">for</span> freescale_imx8qmmek
+  freescale_imx8qxpmek_defconfig                 - Build <span class="k">for</span> freescale_imx8qxpmek
+  freescale_p1025twr_defconfig                   - Build <span class="k">for</span> freescale_p1025twr
+  freescale_t1040d4rdb_defconfig                 - Build <span class="k">for</span> freescale_t1040d4rdb
+  freescale_t2080_qds_rdb_defconfig              - Build <span class="k">for</span> freescale_t2080_qds_rdb
+  friendlyarm_nanopc_t4_defconfig                - Build <span class="k">for</span> friendlyarm_nanopc_t4
+  friendlyarm_nanopi_a64_defconfig               - Build <span class="k">for</span> friendlyarm_nanopi_a64
+  friendlyarm_nanopi_m1_defconfig                - Build <span class="k">for</span> friendlyarm_nanopi_m1
+  friendlyarm_nanopi_m1_plus_defconfig           - Build <span class="k">for</span> friendlyarm_nanopi_m1_plus
+  friendlyarm_nanopi_m4_defconfig                - Build <span class="k">for</span> friendlyarm_nanopi_m4
+  friendlyarm_nanopi_neo2_defconfig              - Build <span class="k">for</span> friendlyarm_nanopi_neo2
+  friendlyarm_nanopi_neo4_defconfig              - Build <span class="k">for</span> friendlyarm_nanopi_neo4
+  friendlyarm_nanopi_neo_defconfig               - Build <span class="k">for</span> friendlyarm_nanopi_neo
+  friendlyarm_nanopi_neo_plus2_defconfig         - Build <span class="k">for</span> friendlyarm_nanopi_neo_plus2
+  friendlyarm_nanopi_r1_defconfig                - Build <span class="k">for</span> friendlyarm_nanopi_r1
+  galileo_defconfig                              - Build <span class="k">for</span> galileo
+  globalscale_espressobin_defconfig              - Build <span class="k">for</span> globalscale_espressobin
+  grinn_chiliboard_defconfig                     - Build <span class="k">for</span> grinn_chiliboard
+  grinn_liteboard_defconfig                      - Build <span class="k">for</span> grinn_liteboard
+  hifive_unleashed_defconfig                     - Build <span class="k">for</span> hifive_unleashed
+  imx23evk_defconfig                             - Build <span class="k">for</span> imx23evk
+  imx6-sabreauto_defconfig                       - Build <span class="k">for</span> imx6-sabreauto
+  imx6-sabresd_defconfig                         - Build <span class="k">for</span> imx6-sabresd
+  imx6-sabresd_qt5_defconfig                     - Build <span class="k">for</span> imx6-sabresd_qt5
+  imx6slevk_defconfig                            - Build <span class="k">for</span> imx6slevk
+  imx6sx-sdb_defconfig                           - Build <span class="k">for</span> imx6sx-sdb
+  imx6ulevk_defconfig                            - Build <span class="k">for</span> imx6ulevk
+  imx6ullevk_defconfig                           - Build <span class="k">for</span> imx6ullevk
+  imx6ulpico_defconfig                           - Build <span class="k">for</span> imx6ulpico
+  imx7dpico_defconfig                            - Build <span class="k">for</span> imx7dpico
+  imx7d-sdb_defconfig                            - Build <span class="k">for</span> imx7d-sdb
+  imx8mmpico_defconfig                           - Build <span class="k">for</span> imx8mmpico
+  imx8mpico_defconfig                            - Build <span class="k">for</span> imx8mpico
+  imx8mqevk_defconfig                            - Build <span class="k">for</span> imx8mqevk
+  kontron_pitx_imx8m_defconfig                   - Build <span class="k">for</span> kontron_pitx_imx8m
+  kontron_smarc_sal28_defconfig                  - Build <span class="k">for</span> kontron_smarc_sal28
+  lafrite_defconfig                              - Build <span class="k">for</span> lafrite
+  lego_ev3_defconfig                             - Build <span class="k">for</span> lego_ev3
+  licheepi_zero_defconfig                        - Build <span class="k">for</span> licheepi_zero
+  linksprite_pcduino_defconfig                   - Build <span class="k">for</span> linksprite_pcduino
+  microchip_sam9x60ek_mmc_defconfig              - Build <span class="k">for</span> microchip_sam9x60ek_mmc
+  microchip_sam9x60ek_mmc_dev_defconfig          - Build <span class="k">for</span> microchip_sam9x60ek_mmc_dev
+  microchip_sama5d27_wlsom1_ek_mmc_defconfig     - Build <span class="k">for</span> microchip_sama5d27_wlsom1_ek_mmc
+  microchip_sama5d27_wlsom1_ek_mmc_dev_defconfig - Build <span class="k">for</span> microchip_sama5d27_wlsom1_ek_mmc_dev
+  microchip_sama5d2_icp_mmc_defconfig            - Build <span class="k">for</span> microchip_sama5d2_icp_mmc
+  microchip_sama5d2_icp_mmc_dev_defconfig        - Build <span class="k">for</span> microchip_sama5d2_icp_mmc_dev
+  minnowboard_max_defconfig                      - Build <span class="k">for</span> minnowboard_max
+  minnowboard_max-graphical_defconfig            - Build <span class="k">for</span> minnowboard_max-graphical
+  mx25pdk_defconfig                              - Build <span class="k">for</span> mx25pdk
+  mx51evk_defconfig                              - Build <span class="k">for</span> mx51evk
+  mx53loco_defconfig                             - Build <span class="k">for</span> mx53loco
+  mx6cubox_defconfig                             - Build <span class="k">for</span> mx6cubox
+  mx6sx_udoo_neo_defconfig                       - Build <span class="k">for</span> mx6sx_udoo_neo
+  mx6udoo_defconfig                              - Build <span class="k">for</span> mx6udoo
+  nexbox_a95x_defconfig                          - Build <span class="k">for</span> nexbox_a95x
+  nitrogen6sx_defconfig                          - Build <span class="k">for</span> nitrogen6sx
+  nitrogen6x_defconfig                           - Build <span class="k">for</span> nitrogen6x
+  nitrogen7_defconfig                            - Build <span class="k">for</span> nitrogen7
+  nitrogen8m_defconfig                           - Build <span class="k">for</span> nitrogen8m
+  nitrogen8mm_defconfig                          - Build <span class="k">for</span> nitrogen8mm
+  nitrogen8mn_defconfig                          - Build <span class="k">for</span> nitrogen8mn
+  nitrogen8mp_defconfig                          - Build <span class="k">for</span> nitrogen8mp
+  odroidc2_defconfig                             - Build <span class="k">for</span> odroidc2
+  odroidxu4_defconfig                            - Build <span class="k">for</span> odroidxu4
+  olimex_a10_olinuxino_lime_defconfig            - Build <span class="k">for</span> olimex_a10_olinuxino_lime
+  olimex_a13_olinuxino_defconfig                 - Build <span class="k">for</span> olimex_a13_olinuxino
+  olimex_a20_olinuxino_lime2_defconfig           - Build <span class="k">for</span> olimex_a20_olinuxino_lime2
+  olimex_a20_olinuxino_lime_defconfig            - Build <span class="k">for</span> olimex_a20_olinuxino_lime
+  olimex_a20_olinuxino_micro_defconfig           - Build <span class="k">for</span> olimex_a20_olinuxino_micro
+  olimex_a33_olinuxino_defconfig                 - Build <span class="k">for</span> olimex_a33_olinuxino
+  olimex_a64_olinuxino_defconfig                 - Build <span class="k">for</span> olimex_a64_olinuxino
+  olimex_imx233_olinuxino_defconfig              - Build <span class="k">for</span> olimex_imx233_olinuxino
+  olpc_xo175_defconfig                           - Build <span class="k">for</span> olpc_xo175
+  olpc_xo1_defconfig                             - Build <span class="k">for</span> olpc_xo1
+  openblocks_a6_defconfig                        - Build <span class="k">for</span> openblocks_a6
+  orangepi_lite2_defconfig                       - Build <span class="k">for</span> orangepi_lite2
+  orangepi_lite_defconfig                        - Build <span class="k">for</span> orangepi_lite
+  orangepi_one_defconfig                         - Build <span class="k">for</span> orangepi_one
+  orangepi_one_plus_defconfig                    - Build <span class="k">for</span> orangepi_one_plus
+  orangepi_pc2_defconfig                         - Build <span class="k">for</span> orangepi_pc2
+  orangepi_pc_defconfig                          - Build <span class="k">for</span> orangepi_pc
+  orangepi_pc_plus_defconfig                     - Build <span class="k">for</span> orangepi_pc_plus
+  orangepi_plus_defconfig                        - Build <span class="k">for</span> orangepi_plus
+  orangepi_prime_defconfig                       - Build <span class="k">for</span> orangepi_prime
+  orangepi_r1_defconfig                          - Build <span class="k">for</span> orangepi_r1
+  orangepi_rk3399_defconfig                      - Build <span class="k">for</span> orangepi_rk3399
+  orangepi_win_defconfig                         - Build <span class="k">for</span> orangepi_win
+  orangepi_zero_defconfig                        - Build <span class="k">for</span> orangepi_zero
+  orangepi_zero_plus2_defconfig                  - Build <span class="k">for</span> orangepi_zero_plus2
+  orangepi_zero_plus_defconfig                   - Build <span class="k">for</span> orangepi_zero_plus
+  pandaboard_defconfig                           - Build <span class="k">for</span> pandaboard
+  pcengines_apu2_defconfig                       - Build <span class="k">for</span> pcengines_apu2
+  pc_x86_64_bios_defconfig                       - Build <span class="k">for</span> pc_x86_64_bios
+  pc_x86_64_efi_defconfig                        - Build <span class="k">for</span> pc_x86_64_efi
+  pine64_defconfig                               - Build <span class="k">for</span> pine64
+  pine64_sopine_defconfig                        - Build <span class="k">for</span> pine64_sopine
+  qemu_aarch64_sbsa_defconfig                    - Build <span class="k">for</span> qemu_aarch64_sbsa
+  qemu_aarch64_virt_defconfig                    - Build <span class="k">for</span> qemu_aarch64_virt
+  qemu_arm_versatile_defconfig                   - Build <span class="k">for</span> qemu_arm_versatile
+  qemu_arm_versatile_nommu_defconfig             - Build <span class="k">for</span> qemu_arm_versatile_nommu
+  qemu_arm_vexpress_defconfig                    - Build <span class="k">for</span> qemu_arm_vexpress
+  qemu_arm_vexpress_tz_defconfig                 - Build <span class="k">for</span> qemu_arm_vexpress_tz
+  qemu_m68k_mcf5208_defconfig                    - Build <span class="k">for</span> qemu_m68k_mcf5208
+  qemu_m68k_q800_defconfig                       - Build <span class="k">for</span> qemu_m68k_q800
+  qemu_microblazebe_mmu_defconfig                - Build <span class="k">for</span> qemu_microblazebe_mmu
+  qemu_microblazeel_mmu_defconfig                - Build <span class="k">for</span> qemu_microblazeel_mmu
+  qemu_mips32r2el_malta_defconfig                - Build <span class="k">for</span> qemu_mips32r2el_malta
+  qemu_mips32r2_malta_defconfig                  - Build <span class="k">for</span> qemu_mips32r2_malta
+  qemu_mips32r6el_malta_defconfig                - Build <span class="k">for</span> qemu_mips32r6el_malta
+  qemu_mips32r6_malta_defconfig                  - Build <span class="k">for</span> qemu_mips32r6_malta
+  qemu_mips64el_malta_defconfig                  - Build <span class="k">for</span> qemu_mips64el_malta
+  qemu_mips64_malta_defconfig                    - Build <span class="k">for</span> qemu_mips64_malta
+  qemu_mips64r6el_malta_defconfig                - Build <span class="k">for</span> qemu_mips64r6el_malta
+  qemu_mips64r6_malta_defconfig                  - Build <span class="k">for</span> qemu_mips64r6_malta
+  qemu_nios2_10m50_defconfig                     - Build <span class="k">for</span> qemu_nios2_10m50
+  qemu_or1k_defconfig                            - Build <span class="k">for</span> qemu_or1k
+  qemu_ppc64_e5500_defconfig                     - Build <span class="k">for</span> qemu_ppc64_e5500
+  qemu_ppc64le_pseries_defconfig                 - Build <span class="k">for</span> qemu_ppc64le_pseries
+  qemu_ppc64_pseries_defconfig                   - Build <span class="k">for</span> qemu_ppc64_pseries
+  qemu_ppc_e500mc_defconfig                      - Build <span class="k">for</span> qemu_ppc_e500mc
+  qemu_ppc_g3beige_defconfig                     - Build <span class="k">for</span> qemu_ppc_g3beige
+  qemu_ppc_mac99_defconfig                       - Build <span class="k">for</span> qemu_ppc_mac99
+  qemu_ppc_mpc8544ds_defconfig                   - Build <span class="k">for</span> qemu_ppc_mpc8544ds
+  qemu_riscv32_virt_defconfig                    - Build <span class="k">for</span> qemu_riscv32_virt
+  qemu_riscv64_virt_defconfig                    - Build <span class="k">for</span> qemu_riscv64_virt
+  qemu_s390x_defconfig                           - Build <span class="k">for</span> qemu_s390x
+  qemu_sh4eb_r2d_defconfig                       - Build <span class="k">for</span> qemu_sh4eb_r2d
+  qemu_sh4_r2d_defconfig                         - Build <span class="k">for</span> qemu_sh4_r2d
+  qemu_sparc64_sun4u_defconfig                   - Build <span class="k">for</span> qemu_sparc64_sun4u
+  qemu_sparc_ss10_defconfig                      - Build <span class="k">for</span> qemu_sparc_ss10
+  qemu_x86_64_defconfig                          - Build <span class="k">for</span> qemu_x86_64
+  qemu_x86_defconfig                             - Build <span class="k">for</span> qemu_x86
+  qemu_xtensa_lx60_defconfig                     - Build <span class="k">for</span> qemu_xtensa_lx60
+  qemu_xtensa_lx60_nommu_defconfig               - Build <span class="k">for</span> qemu_xtensa_lx60_nommu
+  raspberrypi0_defconfig                         - Build <span class="k">for</span> raspberrypi0
+  raspberrypi0w_defconfig                        - Build <span class="k">for</span> raspberrypi0w
+  raspberrypi2_defconfig                         - Build <span class="k">for</span> raspberrypi2
+  raspberrypi3_64_defconfig                      - Build <span class="k">for</span> raspberrypi3_64
+  raspberrypi3_defconfig                         - Build <span class="k">for</span> raspberrypi3
+  raspberrypi3_qt5we_defconfig                   - Build <span class="k">for</span> raspberrypi3_qt5we
+  raspberrypi4_64_defconfig                      - Build <span class="k">for</span> raspberrypi4_64
+  raspberrypi4_defconfig                         - Build <span class="k">for</span> raspberrypi4
+  raspberrypicm4io_64_defconfig                  - Build <span class="k">for</span> raspberrypicm4io_64
+  raspberrypicm4io_defconfig                     - Build <span class="k">for</span> raspberrypicm4io
+  raspberrypi_defconfig                          - Build <span class="k">for</span> raspberrypi
+  riotboard_defconfig                            - Build <span class="k">for</span> riotboard
+  rock64_defconfig                               - Build <span class="k">for</span> rock64
+  rock_pi_4_defconfig                            - Build <span class="k">for</span> rock_pi_4
+  rock_pi_n10_defconfig                          - Build <span class="k">for</span> rock_pi_n10
+  rock_pi_n8_defconfig                           - Build <span class="k">for</span> rock_pi_n8
+  rockpro64_defconfig                            - Build <span class="k">for</span> rockpro64
+  roc_pc_rk3399_defconfig                        - Build <span class="k">for</span> roc_pc_rk3399
+  roseapplepi_defconfig                          - Build <span class="k">for</span> roseapplepi
+  s6lx9_microboard_defconfig                     - Build <span class="k">for</span> s6lx9_microboard
+  sheevaplug_defconfig                           - Build <span class="k">for</span> sheevaplug
+  snps_aarch64_vdk_defconfig                     - Build <span class="k">for</span> snps_aarch64_vdk
+  snps_arc700_axs101_defconfig                   - Build <span class="k">for</span> snps_arc700_axs101
+  snps_archs38_axs103_defconfig                  - Build <span class="k">for</span> snps_archs38_axs103
+  snps_archs38_haps_defconfig                    - Build <span class="k">for</span> snps_archs38_haps
+  snps_archs38_hsdk_defconfig                    - Build <span class="k">for</span> snps_archs38_hsdk
+  snps_archs38_vdk_defconfig                     - Build <span class="k">for</span> snps_archs38_vdk
+  socrates_cyclone5_defconfig                    - Build <span class="k">for</span> socrates_cyclone5
+  solidrun_clearfog_defconfig                    - Build <span class="k">for</span> solidrun_clearfog
+  solidrun_clearfog_gt_8k_defconfig              - Build <span class="k">for</span> solidrun_clearfog_gt_8k
+  solidrun_macchiatobin_defconfig                - Build <span class="k">for</span> solidrun_macchiatobin
+  stm32f429_disco_defconfig                      - Build <span class="k">for</span> stm32f429_disco
+  stm32f469_disco_defconfig                      - Build <span class="k">for</span> stm32f469_disco
+  stm32f469_disco_xip_defconfig                  - Build <span class="k">for</span> stm32f469_disco_xip
+  stm32mp157a_dk1_defconfig                      - Build <span class="k">for</span> stm32mp157a_dk1
+  stm32mp157c_dk2_defconfig                      - Build <span class="k">for</span> stm32mp157c_dk2
+  stm32mp157c_odyssey_defconfig                  - Build <span class="k">for</span> stm32mp157c_odyssey
+  terasic_de10nano_cyclone5_defconfig            - Build <span class="k">for</span> terasic_de10nano_cyclone5
+  toradex_apalis_imx6_defconfig                  - Build <span class="k">for</span> toradex_apalis_imx6
+  ts4900_defconfig                               - Build <span class="k">for</span> ts4900
+  ts5500_defconfig                               - Build <span class="k">for</span> ts5500
+  ts7680_defconfig                               - Build <span class="k">for</span> ts7680
+  uevm5432_defconfig                             - Build <span class="k">for</span> uevm5432
+  wandboard_defconfig                            - Build <span class="k">for</span> wandboard
+  warp7_defconfig                                - Build <span class="k">for</span> warp7
+  warpboard_defconfig                            - Build <span class="k">for</span> warpboard
+  zynq_microzed_defconfig                        - Build <span class="k">for</span> zynq_microzed
+  zynqmp_zcu106_defconfig                        - Build <span class="k">for</span> zynqmp_zcu106
+  zynq_qmtech_defconfig                          - Build <span class="k">for</span> zynq_qmtech
+  zynq_zc706_defconfig                           - Build <span class="k">for</span> zynq_zc706
+  zynq_zed_defconfig                             - Build <span class="k">for</span> zynq_zed
+
+<span class="c1"># run build process</span>
+$./brm.sh build
+<span class="o">[</span>brm<span class="o">]</span> <span class="k">select</span> target configuration: raspberrypi3_defconfig
+
+<span class="c1"># list output images</span>
+$./brm.sh images
+total <span class="m">157072</span>
+drwxr-xr-x <span class="m">3</span> electux electux      <span class="m">4096</span> Nov  <span class="m">2</span> <span class="m">18</span>:13 .
+drwxr-xr-x <span class="m">6</span> electux electux      <span class="m">4096</span> Nov  <span class="m">2</span> <span class="m">18</span>:13 ..
+-rwxr-xr-x <span class="m">1</span> electux electux     <span class="m">28939</span> Nov  <span class="m">2</span> <span class="m">18</span>:12 bcm2710-rpi-3-b.dtb
+-rwxr-xr-x <span class="m">1</span> electux electux     <span class="m">29558</span> Nov  <span class="m">2</span> <span class="m">18</span>:12 bcm2710-rpi-3-b-plus.dtb
+-rwxr-xr-x <span class="m">1</span> electux electux     <span class="m">27429</span> Nov  <span class="m">2</span> <span class="m">18</span>:12 bcm2710-rpi-cm3.dtb
+-rw-r--r-- <span class="m">1</span> electux electux  <span class="m">33554432</span> Nov  <span class="m">2</span> <span class="m">18</span>:13 boot.vfat
+-rw-r--r-- <span class="m">1</span> electux electux <span class="m">125829120</span> Nov  <span class="m">2</span> <span class="m">18</span>:13 rootfs.ext2
+lrwxrwxrwx <span class="m">1</span> electux electux        <span class="m">11</span> Nov  <span class="m">2</span> <span class="m">18</span>:13 rootfs.ext4 -&gt; rootfs.ext2
+drwxr-xr-x <span class="m">3</span> electux electux      <span class="m">4096</span> Nov  <span class="m">2</span> <span class="m">17</span>:43 rpi-firmware
+-rw-r--r-- <span class="m">1</span> electux electux <span class="m">159384064</span> Nov  <span class="m">2</span> <span class="m">18</span>:13 sdcard.img
+-rw-r--r-- <span class="m">1</span> electux electux   <span class="m">6341136</span> Nov  <span class="m">2</span> <span class="m">18</span>:12 zImage
+</pre></div>
+</div>
+</div>
+<div class="section" id="shell-tool-structure">
+<h1>Shell tool structure<a class="headerlink" href="#shell-tool-structure" title="Permalink to this headline">¶</a></h1>
+<p><strong>brm</strong> is based on MOP.</p>
+<p>Code structure:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brm.sh
+brm_list_projects.sh
+brm_setup_project.sh
+brm_clone_project.sh
+brm_list_configurations.sh
+brm_menu_configuration.sh
+brm_build_project.sh
+brm_list_images.sh
+brm_clean_project.sh
+</pre></div>
+</div>
+</div>
+<div class="section" id="copyright-and-licence">
+<h1>Copyright and licence<a class="headerlink" href="#copyright-and-licence" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0"><img alt="License: GPL v3" src="https://img.shields.io/badge/License-GPLv3-blue.svg" /></a> <a class="reference external" href="https://opensource.org/licenses/Apache-2.0"><img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a></p>
+<p>Copyright (C) 2021 by <a class="reference external" href="https://electux.github.io/brm">electux.github.io/brm</a></p>
+<p><strong>brm</strong> is free software; you can redistribute it and/or modify it
+under the same terms as Bash itself, either Bash version 4.2.47 or,
+at your option, any later version of Bash 4 you may have available.</p>
+<p>Lets help and support FSF.</p>
+<p><a class="reference external" href="https://my.fsf.org/"><img alt="Free Software Foundation" src="https://raw.githubusercontent.com/electux/brm/dev/docs/fsf-logo_1.png" /></a></p>
+<p><a class="reference external" href="https://my.fsf.org/donate/"><img alt="Donate" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" /></a></p>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Vladimir Roncevic &lt;elektron.ronca@gmail.com&gt;.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
