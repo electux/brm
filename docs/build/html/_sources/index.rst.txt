@@ -1,5 +1,5 @@
 brm
----------
+---
 
 **brm** is shell tool for generating `Buildroot <https://en.wikipedia.org/wiki/Buildroot>`_.
 
@@ -31,13 +31,18 @@ other information that should be provided before the tool is installed.
     self
 
 Installation
--------------
+------------
+
+|Debian Linux OS|
+
+.. |Debian Linux OS| image:: https://raw.githubusercontent.com/electux/brm/dev/docs/debtux.png
+   :target: https://www.debian.org
 
 Navigate to release `page`_ download and extract release archive.
 
 .. _page: https://github.com/electux/brm/releases
 
-To install **brm** type the following:
+To install **brm** type the following
 
 .. code-block:: bash
 
@@ -53,19 +58,19 @@ Or You can use Docker to create image/container.
    :target: https://github.com/electux/brm/actions?query=workflow%3A%22brm+docker+checker%22
 
 Dependencies
--------------
+------------
 
-**brm** requires next modules and libraries:
+**brm** requires next modules and libraries
 
 * sh_util `https://github.com/electux/sh_util <https://github.com/electux/sh_util>`_
 
 Usage
-------
+-----
 
 .. code-block:: bash
 
     # create project setup
-    $./brm.sh init
+    ./brm.sh init
     [brm] provide project name: microhil
     [brm] creating dir: /data/dev/build_root/microhil
     [brm] change dir: /data/dev/build_root/microhil
@@ -76,17 +81,17 @@ Usage
     Resolving deltas: 100% (292220/292220), done.
     
     # jump to project directory and source
-    $cd microhil/
-    $source microhil.brm
+    cd microhil/
+    source microhil.brm
     
     # list projects
-    $./brm.sh list
+    ./brm.sh list
     
     [brm] Setup workspace for project #microhil, run:
     source /data/dev/build_root/microhil/microhil.brm
     
     # list configuraitons
-    $./brm.sh conf
+    ./brm.sh conf
     Built-in configs:      
       aarch64_efi_defconfig                          - Build for aarch64_efi
       acmesystems_acqua_a5_256mb_defconfig           - Build for acmesystems_acqua_a5_256mb
@@ -349,11 +354,11 @@ Usage
       zynq_zed_defconfig                             - Build for zynq_zed
      
     # run build process
-    $./brm.sh build 
+    ./brm.sh build 
     [brm] select target configuration: raspberrypi3_defconfig
     
     # list output images
-    $./brm.sh images
+    ./brm.sh images
     total 157072
     drwxr-xr-x 3 electux electux      4096 Nov  2 18:13 .
     drwxr-xr-x 6 electux electux      4096 Nov  2 18:13 ..
@@ -368,11 +373,11 @@ Usage
     -rw-r--r-- 1 electux electux   6341136 Nov  2 18:12 zImage
 
 Shell tool structure
----------------------
+--------------------
 
 **brm** is based on MOP.
 
-Code structure:
+Shell tool structure
 
 .. code-block:: bash
 

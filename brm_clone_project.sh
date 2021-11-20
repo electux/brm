@@ -1,7 +1,8 @@
+#!/usr/bin/bash
 #
 # @brief   Build root manager
 # @version ver.1.0.0
-# @date    16.10.2021.
+# @date    Sun Nov 21 00:40:40 CET 2021
 # @company None, free software to use 2021
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
@@ -29,8 +30,8 @@
 # fi
 #
 function __brm_clone_project {
-    local git_path=$(which git)
-    if [[ ! -e ${git_path} ]]; then
+    local GIT_PATH=$(which git)
+    if [[ ! -e ${GIT_PATH} ]]; then
         printf "%s\n" "[brm] check revision tool: git"
         return 127
     fi

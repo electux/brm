@@ -29,9 +29,11 @@ other information that should be provided before the tool is installed.
 
 ### Installation
 
+![Debian Linux OS](https://raw.githubusercontent.com/electux/brm/dev/docs/debtux.png)
+
 Navigate to release **[page](https://github.com/electux/brm/releases)** download and extract release archive.
 
-To install **brm** type the following:
+To install **brm** type the following
 
 ```
 tar xvzf brm-x.y.tar.gz
@@ -49,7 +51,7 @@ Or You can use docker to create image/container.
 
 ```
 # create project setup
-$./brm.sh init
+./brm.sh init
 [brm] provide project name: microhil
 [brm] creating dir: /data/dev/build_root/microhil
 [brm] change dir: /data/dev/build_root/microhil
@@ -60,17 +62,17 @@ Receiving objects: 100% (438618/438618), 134.63 MiB | 3.46 MiB/s, done.
 Resolving deltas: 100% (292220/292220), done.
 
 # jump to project directory and source
-$cd microhil/
-$source microhil.brm
+cd microhil/
+source microhil.brm
 
 # list projects
-$./brm.sh list
+./brm.sh list
 
 [brm] Setup workspace for project #microhil, run:
 source /data/dev/build_root/microhil/microhil.brm
 
 # list configuraitons
-$./brm.sh conf
+./brm.sh conf
 Built-in configs:      
   aarch64_efi_defconfig                          - Build for aarch64_efi
   acmesystems_acqua_a5_256mb_defconfig           - Build for acmesystems_acqua_a5_256mb
@@ -333,11 +335,11 @@ Built-in configs:
   zynq_zed_defconfig                             - Build for zynq_zed
  
 # run build process
-$./brm.sh build 
+./brm.sh build 
 [brm] select target configuration: raspberrypi3_defconfig
 
 # list output images
-$./brm.sh images
+./brm.sh images
 total 157072
 drwxr-xr-x 3 electux electux      4096 Nov  2 18:13 .
 drwxr-xr-x 6 electux electux      4096 Nov  2 18:13 ..
@@ -354,14 +356,14 @@ drwxr-xr-x 3 electux electux      4096 Nov  2 17:43 rpi-firmware
 
 ### Dependencies
 
-**brm** requires next modules and libraries:
+**brm** requires next modules and libraries
 * None
 
 ### Shell tool structure
 
 **brm** is based on MOP.
 
-Code structure:
+Shell tool structure
 ```
 brm.sh
 brm_list_projects.sh
@@ -378,7 +380,7 @@ brm_clean_project.sh
 
 [![Documentation Status](https://readthedocs.org/projects/buildrootmanager/badge/?version=latest)](https://buildrootmanager.readthedocs.io/projects/buildrootmanager/en/latest/?badge=latest)
 
-More documentation and info at:
+More documentation and info at
 * [https://buildrootmanager.readthedocs.io](https://buildrootmanager.readthedocs.io/en/latest/)
 * [https://www.gnu.org](https://www.gnu.org/software/bash/manual/)
 * [https://buildroot.org](https://buildroot.org/)

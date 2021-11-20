@@ -1,7 +1,8 @@
+#!/usr/bin/bash
 #
 # @brief   Build root manager
 # @version ver.1.0.0
-# @date    16.10.2021.
+# @date    Sun Nov 21 00:40:40 CET 2021
 # @company None, free software to use 2021
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
@@ -29,8 +30,8 @@
 # fi
 #
 function __brm_list_configurations {
-    local make_path=$(which make)
-    if [[ ! -e ${make_path} ]]; then
+    local MAKE_PATH=$(which make)
+    if [[ ! -e ${MAKE_PATH} ]]; then
         printf "%s\n" "[brm] check build automation tool: make"
         return 127
     fi
