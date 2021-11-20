@@ -41,8 +41,6 @@ cd brm-x.y
 cp -R *.sh   /data/dev/build_root/
 ```
 
-![env](https://raw.githubusercontent.com/electux/brm/dev/docs/debtux.png)
-
 Or You can use docker to create image/container.
 
 [![brm docker checker](https://github.com/electux/brm/workflows/brm%20docker%20checker/badge.svg)](https://github.com/electux/brm/actions?query=workflow%3A%22brm+docker+checker%22)
