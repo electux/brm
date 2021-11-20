@@ -2,7 +2,7 @@
 #
 # @brief   Build root manager
 # @version ver.1.0.0
-# @date    16.10.2021.
+# @date    Sun Nov 21 00:40:40 CET 2021
 # @company None, free software to use 2021
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
@@ -63,8 +63,8 @@ END_HELP_TXT
 # @usage
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 #
-# local option="init" STATUS
-# brm_handler $option
+# local OPTION="init" STATUS
+# brm_handler $OPTION
 # STATUS=$?
 #
 # if [ $STATUS -eq 0 ]; then
@@ -78,52 +78,52 @@ END_HELP_TXT
 # fi
 #
 function brm_handler {
-    local option=$1 number_of_arguments=$# status
-    if [[ "$number_of_arguments" -ne 1 || ! -n "${option}" ]]; then
+    local OPTION=$1 NUMBER_OF_ARGUMENTS=$# STATUS
+    if [[ "$NUMBER_OF_ARGUMENTS" -ne 1 || ! -n "${OPTION}" ]]; then
         __brm_build_root_helper
         return 127
     fi
-    status=128
-    case $option in
+    STATUS=128
+    case $OPTION in
         "init")
             printf "%s: " "[brm] provide project name"
-            read pro_name
-            __brm_setup_project $pro_name
-            status=$?
+            read PRO_NAME
+            __brm_setup_project $PRO_NAME
+            STATUS=$?
             ;;
         "list")
             __brm_list_projects
-            status=$?
+            STATUS=$?
             ;;
         "conf")
             __brm_list_configurations
-            status=$?
+            STATUS=$?
             ;;
         "menu")
             __brm_menu_configuration
-            status=$?
+            STATUS=$?
             ;;
         "build")
             printf "%s: " "[brm] select target configuration"
-            read configuration
-            __brm_build_project $configuration
-            status=$?
+            read CONFIGURATION
+            __brm_build_project $CONFIGURATION
+            STATUS=$?
             ;;
         "images")
             __brm_list_images
-            status=$?
+            STATUS=$?
             ;;
         "clean")
             __brm_clean_project
-            status=$?
+            STATUS=$?
             ;;
         *)
             __brm_build_root_helper
             ;;
     esac
-    return $status
+    return $STATUS
 }
 
 brm_handler $1
-STATUS=$?
-exit $STATUS
+BRM_STATUS=$?
+exit $BRM_STATUS

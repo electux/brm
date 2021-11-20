@@ -1,7 +1,8 @@
+#!/usr/bin/bash
 #
 # @brief   Build root manager
 # @version ver.1.0.0
-# @date    16.10.2021.
+# @date    Sun Nov 21 00:40:40 CET 2021
 # @company None, free software to use 2021
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
@@ -29,13 +30,13 @@
 # fi
 #
 function __brm_clean_project {
-    local out_dir="${BRM_DIR}/buildroot/output"
-    if [[ ! -d "${out_dir}" ]]; then
+    local OUT_DIR="${BRM_DIR}/buildroot/output"
+    if [[ ! -d "${OUT_DIR}" ]]; then
         printf "%s\n" "[brm] expected directory: project_dir/buildroot/output"
-        printf "%s\n" "[brm] check directory: ${out_dir}"
+        printf "%s\n" "[brm] check directory: ${OUT_DIR}"
         return 127
     fi
-    rm -rf "${out_dir}/target"
-    find "${out_dir}/" -name ".stamp_target_installed" | xargs rm -rf
+    rm -rf "${OUT_DIR}/target"
+    find "${OUT_DIR}/" -name ".stamp_target_installed" | xargs rm -rf
     return 0
 }

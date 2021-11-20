@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>brm &mdash; brm https://github.com/electux/brm/releases documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <title>brm &mdash; brm https://github.com/electux/brm/releases documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
@@ -65,7 +66,7 @@
            <div itemprop="articleBody">
              
   <div class="section" id="brm">
-<h1>brm<a class="headerlink" href="#brm" title="Permalink to this headline">¶</a></h1>
+<h1>brm<a class="headerlink" href="#brm" title="Permalink to this headline"></a></h1>
 <p><strong>brm</strong> is shell tool for generating <a class="reference external" href="https://en.wikipedia.org/wiki/Buildroot">Buildroot</a>.</p>
 <p>Developed in <a class="reference external" href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">bash</a> code: <strong>100%</strong>.</p>
 <p><a class="reference external" href="https://github.com/electux/brm/actions?query=workflow%3A%22brm+shell+checker%22"><img alt="GitHub shell checker" src="https://github.com/electux/brm/workflows/brm%20shell%20checker/badge.svg" /></a></p>
@@ -77,9 +78,10 @@ other information that should be provided before the tool is installed.</p>
 </div>
 </div>
 <div class="section" id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h1>
+<p><a class="reference external" href="https://www.debian.org"><img alt="Debian Linux OS" src="https://raw.githubusercontent.com/electux/brm/dev/docs/debtux.png" /></a></p>
 <p>Navigate to release <a class="reference external" href="https://github.com/electux/brm/releases">page</a> download and extract release archive.</p>
-<p>To install <strong>brm</strong> type the following:</p>
+<p>To install <strong>brm</strong> type the following</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar xvzf brm-x.y.tar.gz
 <span class="nb">cd</span> brm-x.y
 cp -R *.sh   /data/dev/build_root/
@@ -89,16 +91,16 @@ cp -R *.sh   /data/dev/build_root/
 <p><a class="reference external" href="https://github.com/electux/brm/actions?query=workflow%3A%22brm+docker+checker%22"><img alt="GitHub docker checker" src="https://github.com/electux/brm/workflows/brm%20docker%20checker/badge.svg" /></a></p>
 </div>
 <div class="section" id="dependencies">
-<h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h1>
-<p><strong>brm</strong> requires next modules and libraries:</p>
+<h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h1>
+<p><strong>brm</strong> requires next modules and libraries</p>
 <ul class="simple">
-<li>sh_util <a class="reference external" href="https://github.com/electux/sh_util">https://github.com/electux/sh_util</a></li>
+<li><p>sh_util <a class="reference external" href="https://github.com/electux/sh_util">https://github.com/electux/sh_util</a></p></li>
 </ul>
 </div>
 <div class="section" id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h1>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create project setup</span>
-$./brm.sh init
+./brm.sh init
 <span class="o">[</span>brm<span class="o">]</span> provide project name: microhil
 <span class="o">[</span>brm<span class="o">]</span> creating dir: /data/dev/build_root/microhil
 <span class="o">[</span>brm<span class="o">]</span> change dir: /data/dev/build_root/microhil
@@ -109,17 +111,17 @@ Receiving objects: <span class="m">100</span>% <span class="o">(</span><span cla
 Resolving deltas: <span class="m">100</span>% <span class="o">(</span><span class="m">292220</span>/292220<span class="o">)</span>, <span class="k">done</span>.
 
 <span class="c1"># jump to project directory and source</span>
-<span class="nv">$cd</span> microhil/
-<span class="nv">$source</span> microhil.brm
+<span class="nb">cd</span> microhil/
+<span class="nb">source</span> microhil.brm
 
 <span class="c1"># list projects</span>
-$./brm.sh list
+./brm.sh list
 
 <span class="o">[</span>brm<span class="o">]</span> Setup workspace <span class="k">for</span> project <span class="c1">#microhil, run:</span>
 <span class="nb">source</span> /data/dev/build_root/microhil/microhil.brm
 
 <span class="c1"># list configuraitons</span>
-$./brm.sh conf
+./brm.sh conf
 Built-in configs:
   aarch64_efi_defconfig                          - Build <span class="k">for</span> aarch64_efi
   acmesystems_acqua_a5_256mb_defconfig           - Build <span class="k">for</span> acmesystems_acqua_a5_256mb
@@ -382,11 +384,11 @@ Built-in configs:
   zynq_zed_defconfig                             - Build <span class="k">for</span> zynq_zed
 
 <span class="c1"># run build process</span>
-$./brm.sh build
+./brm.sh build
 <span class="o">[</span>brm<span class="o">]</span> <span class="k">select</span> target configuration: raspberrypi3_defconfig
 
 <span class="c1"># list output images</span>
-$./brm.sh images
+./brm.sh images
 total <span class="m">157072</span>
 drwxr-xr-x <span class="m">3</span> electux electux      <span class="m">4096</span> Nov  <span class="m">2</span> <span class="m">18</span>:13 .
 drwxr-xr-x <span class="m">6</span> electux electux      <span class="m">4096</span> Nov  <span class="m">2</span> <span class="m">18</span>:13 ..
@@ -403,9 +405,9 @@ drwxr-xr-x <span class="m">3</span> electux electux      <span class="m">4096</s
 </div>
 </div>
 <div class="section" id="shell-tool-structure">
-<h1>Shell tool structure<a class="headerlink" href="#shell-tool-structure" title="Permalink to this headline">¶</a></h1>
+<h1>Shell tool structure<a class="headerlink" href="#shell-tool-structure" title="Permalink to this headline"></a></h1>
 <p><strong>brm</strong> is based on MOP.</p>
-<p>Code structure:</p>
+<p>Shell tool structure</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brm.sh
 brm_list_projects.sh
 brm_setup_project.sh
@@ -419,7 +421,7 @@ brm_clean_project.sh
 </div>
 </div>
 <div class="section" id="copyright-and-licence">
-<h1>Copyright and licence<a class="headerlink" href="#copyright-and-licence" title="Permalink to this headline">¶</a></h1>
+<h1>Copyright and licence<a class="headerlink" href="#copyright-and-licence" title="Permalink to this headline"></a></h1>
 <p><a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0"><img alt="License: GPL v3" src="https://img.shields.io/badge/License-GPLv3-blue.svg" /></a> <a class="reference external" href="https://opensource.org/licenses/Apache-2.0"><img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a></p>
 <p>Copyright (C) 2021 by <a class="reference external" href="https://electux.github.io/brm">electux.github.io/brm</a></p>
 <p><strong>brm</strong> is free software; you can redistribute it and/or modify it
@@ -430,11 +432,11 @@ at your option, any later version of Bash 4 you may have available.</p>
 <p><a class="reference external" href="https://my.fsf.org/donate/"><img alt="Donate" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" /></a></p>
 </div>
 <div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h1>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 </div>
 

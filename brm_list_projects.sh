@@ -1,7 +1,8 @@
+#!/usr/bin/bash
 #
 # @brief   Build root manager
 # @version ver.1.0.0
-# @date    16.10.2021.
+# @date    Sun Nov 21 00:40:40 CET 2021
 # @company None, free software to use 2021
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
@@ -34,16 +35,16 @@ function __brm_list_projects {
         return 127
     fi
     cd "${BUILD_ROOT_DIR}/"
-    for brm_file in $(find . -name "*.brm")
+    for BRM_FILE in $(find . -name "*.brm")
     do
-        pro_name="$(basename "$(dirname "$brm_file")")"
-        pro_brm_file="${BUILD_ROOT_DIR}/${pro_name}/${pro_name}.brm"
-        if [[ ! -e "${pro_brm_file}" ]]; then
-            printf "%s\n" "[brm] expected file: ${pro_brm_file}"
+        PRO_NAME="$(basename "$(dirname "$BRM_FILE")")"
+        PRO_BRM_FILE="${BUILD_ROOT_DIR}/${PRO_NAME}/${PRO_NAME}.brm"
+        if [[ ! -e "${PRO_BRM_FILE}" ]]; then
+            printf "%s\n" "[brm] expected file: ${PRO_BRM_FILE}"
             return 128
         fi
-        printf "\n%s\n" "[brm] Setup workspace for project #${pro_name}, run:"
-        printf "%s\n\n" "source ${pro_brm_file}"
+        printf "\n%s\n" "[brm] setup workspace for project #${PRO_NAME}, run:"
+        printf "%s\n\n" "source ${PRO_BRM_FILE}"
     done
     return 0
 }
