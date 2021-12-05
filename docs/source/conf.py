@@ -3,7 +3,7 @@
 project = 'brm'
 copyright = '2021, Vladimir Roncevic <elektron.ronca@gmail.com>'
 author = 'Vladimir Roncevic <elektron.ronca@gmail.com>'
-version = u'1.0.0'
+version = u'2.0'
 release = 'https://github.com/electux/brm/releases'
 extensions = []
 templates_path = ['_templates']
