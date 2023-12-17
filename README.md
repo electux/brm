@@ -6,7 +6,7 @@
 
 Developed in **[bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell))** code: **100%**.
 
-[![brm shell checker](https://github.com/electux/brm/workflows/brm%20shell%20checker/badge.svg)](https://github.com/electux/brm/actions?query=workflow%3A%22brm+shell+checker%22)
+[![brm_shell_checker](https://github.com/vroncevic/brm/actions/workflows/brm_shell_checker.yml/badge.svg)](https://github.com/vroncevic/brm/actions/workflows/brm_shell_checker.yml)
 
 The README is used to introduce the tool and provide instructions on
 how to install the tool, any machine dependencies it may have and any
@@ -42,8 +42,6 @@ cp -R *.sh   /data/dev/build_root/
 ```
 
 Or You can use docker to create image/container.
-
-[![brm docker checker](https://github.com/electux/brm/workflows/brm%20docker%20checker/badge.svg)](https://github.com/electux/brm/actions?query=workflow%3A%22brm+docker+checker%22)
 
 ### Usage
 
@@ -387,7 +385,7 @@ More documentation and info at
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Copyright (C) 2021 by [electux.github.io/brm](https://electux.github.io/brm)
+Copyright (C) 2021 - 2024 by [electux.github.io/brm](https://electux.github.io/brm)
 
 **brm** is free software; you can redistribute it and/or modify
 it under the same terms as Bash itself, either Bash version 4.2.47 or,
