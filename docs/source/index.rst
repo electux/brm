@@ -7,8 +7,8 @@ Developed in `bash <https://en.wikipedia.org/wiki/Bash_(Unix_shell)>`_ code: **1
 
 |GitHub shell checker|
 
-.. |GitHub shell checker| image:: https://github.com/vroncevic/brm/actions/workflows/brm_shell_checker.yml/badge.svg
-   :target: https://github.com/vroncevic/brm/actions/workflows/brm_shell_checker.yml
+.. |GitHub shell checker| image:: https://github.com/electux/brm/actions/workflows/brm_shell_checker.yml/badge.svg
+   :target: https://github.com/electux/brm/actions/workflows/brm_shell_checker.yml
 
 The README is used to introduce the tool and provide instructions on
 how to install the tool, any machine dependencies it may have and any

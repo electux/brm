@@ -6,7 +6,7 @@
 
 Developed in **[bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell))** code: **100%**.
 
-[![brm_shell_checker](https://github.com/vroncevic/brm/actions/workflows/brm_shell_checker.yml/badge.svg)](https://github.com/vroncevic/brm/actions/workflows/brm_shell_checker.yml)
+[![brm_shell_checker](https://github.com/electux/brm/actions/workflows/brm_shell_checker.yml/badge.svg)](https://github.com/electux/brm/actions/workflows/brm_shell_checker.yml)
 
 The README is used to introduce the tool and provide instructions on
 how to install the tool, any machine dependencies it may have and any

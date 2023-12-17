@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 #
-# @brief   Build root manager
+# @brief   Build root manager (brm)
 # @version ver.1.0
 # @date    Sun Nov 21 00:40:40 CET 2021
 # @company None, free software to use 2021
