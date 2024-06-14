@@ -1,6 +1,6 @@
-<img align="right" src="https://raw.githubusercontent.com/electux/brm/dev/docs/brm_logo.png" width="25%">
-
 # Build Root Manager
+
+<img align="right" src="https://raw.githubusercontent.com/electux/brm/dev/docs/brm_logo.png" width="25%">
 
 **brm** is shell tool for controlling/operating **[Buildroot](https://en.wikipedia.org/wiki/Buildroot)**.
 
@@ -35,7 +35,7 @@ Navigate to release **[page](https://github.com/electux/brm/releases)** download
 
 To install **brm** type the following
 
-```
+```bash
 tar xvzf brm-x.y.tar.gz
 cd brm-x.y
 cp -R *.sh   /data/dev/build_root/
@@ -45,7 +45,7 @@ Or You can use docker to create image/container.
 
 ### Usage
 
-```
+```bash
 # create project setup
 ./brm.sh init
 [brm] provide project name: microhil
@@ -360,7 +360,8 @@ drwxr-xr-x 3 electux electux      4096 Nov  2 17:43 rpi-firmware
 **brm** is based on MOP.
 
 Shell tool structure
-```
+
+```bash
 brm.sh
 brm_list_projects.sh
 brm_setup_project.sh
