@@ -1,6 +1,5 @@
-var DOCUMENTATION_OPTIONS = {
-    URL_ROOT: document.getElementById("documentation_options").getAttribute('data-url_root'),
-    VERSION: 'https://github.com/vroncevic/brm/releases',
+const DOCUMENTATION_OPTIONS = {
+    VERSION: 'https://github.com/electux/brm/releases',
     LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'html',

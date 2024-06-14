@@ -124,6 +124,7 @@ function brm_handler {
     return $STATUS
 }
 
+# @brief Main entry point
 brm_handler $1
 BRM_STATUS=$?
 exit $BRM_STATUS
