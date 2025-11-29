@@ -1,4 +1,4 @@
-# Copyright 2021 - 2024 Vladimir Roncevic <elektron.ronca@gmail.com>
+# Copyright 2021 - 2026 Vladimir Roncevic <elektron.ronca@gmail.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -39,6 +39,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     autotools-dev
 
 RUN mkdir -p /data/dev/build_root/
+COPY brm_setup.sh /data/dev/build_root/
 COPY brm.sh /data/dev/build_root/
 COPY brm_list_projects.sh /data/dev/build_root/
 COPY brm_setup_project.sh /data/dev/build_root/

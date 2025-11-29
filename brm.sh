@@ -1,15 +1,13 @@
 #!/usr/bin/bash
 #
 # @brief   Build root manager (brm)
-# @version ver.1.0
+# @version ver.1.1
 # @date    Sun Nov 21 00:40:40 CET 2021
-# @company None, free software to use 2021
+# @company None, free software to use 2021 - 2026
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
 
-BUILD_ROOT_REPO="https://github.com/buildroot/buildroot.git"
-BUILD_ROOT_DIR="/data/dev/build_root"
-
+.   brm_setup.sh
 .   brm_clone_project.sh
 .   brm_list_projects.sh
 .   brm_list_configurations.sh
@@ -58,32 +56,32 @@ END_HELP_TXT
 #
 # @brief  Buildroot manager handler
 # @param  Value required option
-# @retval Success return 0, else return 127
+# @retval Success return SUCCESS, else return NOT_SUCCESS
 #
 # @usage
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 #
 # local OPTION="init" STATUS
-# brm_handler $OPTION
+# __brm_handler $OPTION
 # STATUS=$?
 #
 # if [ $STATUS -eq 0 ]; then
 #    # true
 #    # notify admin | user success opearation
-#    # exit 0
+#    # exit $SUCCESS
 # else
 #    # false
 #    # missing argument | failed operation
-#    # exit $STATUS
+#    # exit $NOT_SUCCESS
 # fi
 #
-function brm_handler {
+function __brm_handler {
     local OPTION=$1 NUMBER_OF_ARGUMENTS=$# STATUS
     if [[ "$NUMBER_OF_ARGUMENTS" -ne 1 || ! -n "${OPTION}" ]]; then
         __brm_build_root_helper
-        return 127
+        return $NOT_SUCCESS
     fi
-    STATUS=128
+    STATUS=$NOT_SUCCESS
     case $OPTION in
         "init")
             printf "%s: " "[brm] provide project name"
@@ -125,6 +123,6 @@ function brm_handler {
 }
 
 # @brief Main entry point
-brm_handler $1
+__brm_handler $1
 BRM_STATUS=$?
 exit $BRM_STATUS

@@ -362,7 +362,7 @@ drwxr-xr-x 3 electux electux      4096 Nov  2 17:43 rpi-firmware
 Shell tool structure
 
 ```bash
-brm.sh
+brm_setup.sh
 brm_list_projects.sh
 brm_setup_project.sh
 brm_clone_project.sh
@@ -371,6 +371,7 @@ brm_menu_configuration.sh
 brm_build_project.sh
 brm_list_images.sh
 brm_clean_project.sh
+brm.sh
 ```
 
 ### Docs
@@ -386,7 +387,7 @@ More documentation and info at
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Copyright (C) 2021 - 2024 by [electux.github.io/brm](https://electux.github.io/brm)
+Copyright (C) 2021 - 2026 by [electux.github.io/brm](https://electux.github.io/brm)
 
 **brm** is free software; you can redistribute it and/or modify
 it under the same terms as Bash itself, either Bash version 4.2.47 or,

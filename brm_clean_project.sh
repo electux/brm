@@ -1,16 +1,18 @@
 #!/usr/bin/bash
 #
 # @brief   Build root manager (brm)
-# @version ver.1.0
+# @version ver.1.1
 # @date    Sun Nov 21 00:40:40 CET 2021
-# @company None, free software to use 2021
+# @company None, free software to use 2021 - 2026
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
+
+.   brm_status.sh
 
 #
 # @brief  Clean project structure
 # @param  None
-# @retval Success return 0, else return 127
+# @retval Success return 0 (SUCCESS), else return 1 (NOT_SUCCESS)
 #
 # @usage
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -22,11 +24,11 @@
 # if [ $STATUS -eq 0 ]; then
 #    # true
 #    # notify admin | user success operation
-#    # return 0
+#    # return $SUCCESS
 # else
 #    # false
 #    # project structure doesn't exist
-#    # return 127
+#    # return $NOT_SUCCESS
 # fi
 #
 function __brm_clean_project {
@@ -34,9 +36,9 @@ function __brm_clean_project {
     if [[ ! -d "${OUT_DIR}" ]]; then
         printf "%s\n" "[brm] expected directory: project_dir/buildroot/output"
         printf "%s\n" "[brm] check directory: ${OUT_DIR}"
-        return 127
+        return $NOT_SUCCESS
     fi
     rm -rf "${OUT_DIR}/target"
     find "${OUT_DIR}/" -name ".stamp_target_installed" | xargs rm -rf
-    return 0
+    return $SUCCESS
 }
