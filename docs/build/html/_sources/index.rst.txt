@@ -376,7 +376,7 @@ Shell tool structure
 
 .. code-block:: bash
 
-    brm.sh
+    brm_setup.sh
     brm_list_projects.sh
     brm_setup_project.sh
     brm_clone_project.sh
@@ -385,6 +385,7 @@ Shell tool structure
     brm_build_project.sh
     brm_list_images.sh
     brm_clean_project.sh
+    brm.sh
 
 Copyright and licence
 ----------------------
@@ -397,7 +398,7 @@ Copyright and licence
 .. |License: Apache 2.0| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
    :target: https://opensource.org/licenses/Apache-2.0
 
-Copyright (C) 2021 - 2024 by `electux.github.io/brm <https://electux.github.io/brm>`_
+Copyright (C) 2021 - 2026 by `electux.github.io/brm <https://electux.github.io/brm>`_
 
 **brm** is free software; you can redistribute it and/or modify it
 under the same terms as Bash itself, either Bash version 4.2.47 or,
